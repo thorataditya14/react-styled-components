@@ -1,5 +1,6 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from "react";
+import styled from "styled-components";
+
 
 const Square = styled.div`
     width: 60px;
@@ -17,7 +18,7 @@ const Square = styled.div`
             transform: translate(100vw, 100vh);
         }
     }
-`
+`;
 
 const Circle = styled.div`
     width: 100px;
@@ -35,7 +36,7 @@ const Circle = styled.div`
             transform: translate(100vw, -100vh);
         }
     }
-`
+`;
 
 const Rect = styled.div`
     width: 50px;
@@ -53,14 +54,18 @@ const Rect = styled.div`
             transform: translate(100vw, -50vh);
         }
     }
-`
+`;
 
-export default function AnimatedShapes() {
+
+const AnimatedShapes = () => {
     return (
         <>
             <Square />
             <Circle />
             <Rect />
         </>
-    )
-}
+    );
+};
+
+
+export default AnimatedShapes;

@@ -1,18 +1,18 @@
-import styled, { css } from "styled-components";
+import styled, { css } from 'styled-components';
 import Intro from './components/Intro';
 import Navbar from './components/Navbar';
-import Feature from "./components/Feature";
+import Feature from './components/Feature';
 import Service from './components/Service';
-import Price from "./components/Price";
-import Contact from "./components/Contact";
-import Footer from "./components/Footer";
+import Price from './components/Price';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
 
 
 const Container = styled.div`
     height: 100vh;
     overflow: hidden;
     position: relative;
-`
+`;
 
 const Shape = css`
     width: 100%;
@@ -23,7 +23,7 @@ const Shape = css`
     z-index: -1;
 `;
 
-const IntroShape = styled.div`
+const IntoShape = styled.div`
     ${Shape}
     clip-path: polygon(67% 0, 100% 0%, 100% 100%, 55% 100%);
     background-color: crimson;
@@ -31,30 +31,31 @@ const IntroShape = styled.div`
 
 const FeatureShape = styled.div`
     ${Shape}
-    clip-path: polygon(0 0, 55% 0, 33% 100%, 0 100%);
+    clip-path: polygon(0 0, 55% 0%, 33% 100%, 0 100%);
     background-color: pink;
 `;
 
 const ServiceShape = styled.div`
     ${Shape}
-    clip-path: polygon(0 0, 33% 0, 33% 100%, 0 100%);
+    clip-path: polygon(0 0, 33% 0%, 33% 100%, 0 100%);
     background-color: #f88497;
 `;
 
 const PriceShape = styled.div`
-  ${Shape}
-  clip-path: polygon(33% 0, 100% 0%, 100% 100%, 67% 100%);
-  background-color: crimson;
-`
+    ${Shape}
+    clip-path: polygon(33% 0, 100% 0%, 100% 100%, 67% 100%);
+    background-color: crimson;
+`;
 
 
-function App() {
+const App = () => {
+    const smallScreen = window.screen.width <= 480 ? true : false;
     return (
         <>
             <Container>
                 <Navbar />
                 <Intro />
-                <IntroShape />
+                <IntoShape />
             </Container>
             <Container>
                 <Feature />
@@ -62,7 +63,7 @@ function App() {
             </Container>
             <Container>
                 <Service />
-                <ServiceShape />
+                {!smallScreen && <ServiceShape />}
             </Container>
             <Container>
                 <Price />
@@ -74,6 +75,7 @@ function App() {
             </Container>
         </>
     );
-}
+};
+
 
 export default App;
