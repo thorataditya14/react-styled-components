@@ -1,9 +1,11 @@
 import styled, { css } from "styled-components";
-import Feature from "./components/Feature";
 import Intro from './components/Intro';
 import Navbar from './components/Navbar';
+import Feature from "./components/Feature";
 import Service from './components/Service';
 import Price from "./components/Price";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 const Container = styled.div`
     height: 100vh;
@@ -63,6 +65,10 @@ function App() {
             <Container>
                 <Price />
                 <PriceShape />
+            </Container>
+            <Container>
+                <Contact />
+                <Footer />
             </Container>
         </>
     );
