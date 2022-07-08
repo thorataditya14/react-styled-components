@@ -51,19 +51,19 @@ const Button = styled.button`
     cursor: pointer;
 `
 
-export default function PriceCard() {
+export default function PriceCard({price, type}) {
     return (
         <Container>
             <PriceContainer>
-                $<Price>20</Price>/month
-                <Type>Basic Plan</Type>
-                <List>
-                    <ListItem>200 Hand-Crafted Templates</ListItem>
-                    <ListItem>Exclusive Support</ListItem>
-                    <ListItem>50+ PreBuilt Websites</ListItem>
-                    <ListItem>Premium Plugins</ListItem>{" "}
-                </List>
+                $<Price>{price}</Price>/month
             </PriceContainer>
+            <Type>{type} Plan</Type>
+            <List>
+                <ListItem>200 Hand-Crafted Templates</ListItem>
+                <ListItem>Exclusive Support</ListItem>
+                <ListItem>50+ PreBuilt Websites</ListItem>
+                <ListItem>Premium Plugins</ListItem>{" "}
+            </List>
             <Button>Join Now</Button>
         </Container>
     )
