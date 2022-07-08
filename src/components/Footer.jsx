@@ -36,7 +36,6 @@ const Copyright = styled.span`
   }
 `
 
-
 export default function Footer() {
     return (
         <Container>

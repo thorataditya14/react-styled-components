@@ -7,6 +7,7 @@ import Price from "./components/Price";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
+
 const Container = styled.div`
     height: 100vh;
     overflow: hidden;
@@ -45,6 +46,7 @@ const PriceShape = styled.div`
   clip-path: polygon(33% 0, 100% 0%, 100% 100%, 67% 100%);
   background-color: crimson;
 `
+
 
 function App() {
     return (
